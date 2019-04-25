@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+   crossorigin="anonymous">
+ <title>Cake Conference</title>
+ <style>
+    body{
+        margin: 20px;
+        padding: 20px;
+    }
+    
+ </style>
+
+</head>
+<body>
+<div class="container mt-5">
+ <h1>報名表單</h1>
+
+ <form>
+  <div class="form-row">
+    <div class="form-group col-md-4 col-sm12">
+        <label for="input_name">姓名</label>
+        <input class="form-control" type="text" id="input_name" placeholder="王大明" maxlength = 10>
+        <div class="invalid-feedback">
+            請確認您的姓名
+         </div>
+    </div>
+  </div>  
+
+  <div class="form-row">
+    <div class="form-group col-md-4 col-sm12">
+         <label for="input_phone">電話</label>
+        <input class="form-control" type="text" id="input_phone" placeholder="09XX-XXX-XXX">
+        <div class="invalid-feedback">
+            請確認您的手機號碼
+         </div>
+    </div>
+  </div>  
+
+  <div class="form-row">
+    <div class="form-group col-md-4 col-sm12">
+         <label for="input_email">電子郵箱</label>
+        <input class="form-control" type="text" id="input_email" placeholder="123@gmail.com">
+        <div class="invalid-feedback">
+            請確認您的電子郵箱
+         </div>
+    </div>
+  </div>  
+
+  <div class="form-row">
+      <div class="form-group col-12 col-md-6">
+          <label>生日</label>
+          <select id="sel_bdy" class="form-control">
+              <option value="">YYYY</option>
+              <option value="1980">1980</option>
+              <option value="1981">1981</option>
+              <option value="1982">1982</option>
+              <option value="1983" >1983</option>
+              <option value="1983">1984</option>
+              <option value="1983">1985</option>
+          </select>
+          <div class="invalid-feedback">
+            請確認您的生日年份
+         </div>
+      </div>
+      <div class="form-group col-12 col-md-3">
+          <label class="d-none d-md-block">&nbsp;</label>
+          <!-- &nbsp 是空格的意思, d-none 預設(手機)顯示關閉, d-md-block 其他(md 桌機)狀況開啟-->
+          <select id="sel_bdm" class="form-control">
+              <option value="">MM</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+          </select>
+      </div>
+      <div class="form-group col-12 col-md-3">
+          <label>&nbsp;</label><!-- &nbsp 是空格的意思 -->
+          <select id="sel_bdd" class="form-control">
+              <option value="">DD</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+          </select>
+      </div>
+    </div>
+      <!-- 性別 -->
+      <div class="form-row">
+          <div class="form-group col-12">
+              <label for="input_name" class="d-block">性別</label>
+              <!-- 指定這個 lable 裡的值會隱藏，因為預設有兩個 lable，所以隱藏後會變垂直排列 -->
+              <!-- form check 是 Bootstrap 的規定 -->
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="radio_gender" id="radio_gender_m" value="m" checked>
+                  <label class="form-check-label" for="radio_gender_m">
+                      男
+                  </label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="radio_gender" id="radio_gender_f" value="f">
+                  <label class="form-check-label" for="radio_gender_f">
+                      女
+                  </label>
+              </div>
+          </div>
+       </div>
+       <!-- 品項 -->
+       <div class="form-row">
+          <div class="form-group col-12">
+              <label for="input_name" class="d-block">蛋糕選項</label>
+              <div class="form-check form-check-inline">
+              <!-- Form-check-inline 會讓選項橫著排 -->
+                  <input class="form-check-input" type="checkbox" name="check_games" id="check_games_0" value="0">
+                  <label class="form-check-label" for="check_games_0">
+                      草莓戚風蛋糕
+                  </label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="check_games" id="check_games_1" value="1">
+                  <label class="form-check-label" for="check_games_1">
+                      蘋果塔
+                  </label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="check_games" id="check_games_0" value="2">
+                  <label class="form-check-label" for="check_games_2">
+                      胡蘿蔔奶油蛋糕
+                  </label>
+              </div>
+              <div class="invalid-feedback" id="check_games_invalid">
+                請確認資料是否正確
+              </div>
+          </div>
+          
+         
+       </div>
+       <!-- 輸入匡 -->
+       <div class="form-row">
+          <div class="form-group col-12 col-md-6">
+              <label>備註</label>
+              <textarea class="form-control" id="text_note" rows="3" placeholder="備註你的特殊需求～"></textarea>
+          </div>
+       </div>
+       
+   </div>
+   
+<button class="btn btn-outline-warning" id="send">送出</button>
+     
+ <form>
+</div>
+
+ <!-- Optional JavaScript -->
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+   crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+   crossorigin="anonymous"></script>
+   <script src="js/index.js"></script>
+</body>
+
+</html>
