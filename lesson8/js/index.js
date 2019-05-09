@@ -6,6 +6,8 @@ let bdd;
 let gender;
 let games = [];
 let note;
+let patt;
+let result;
 
 //document ready
 //按鈕送出事件，二選一(btn 要給 id)
@@ -34,14 +36,18 @@ function send(e)
     }
 
     phone = $("#input_phone").val();
-    if(phone == "")
+    patt = /^09[0-9]{8}/i;
+    result = patt.test(phone);
+
+    if(phone == "" || !result)
     {
         $("#input_phone").addClass("is-invalid")
         allpass = false;
     }
 
     email = $("#input_email").val();
-    if(email == "")
+    result = email.indexOf('@');
+    if(email == "" || !result)
     {
         $("#input_email").addClass("is-invalid")
         allpass = false;
