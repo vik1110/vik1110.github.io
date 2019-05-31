@@ -39,5 +39,5 @@ exports.sendMail = functions.database.ref('/register/{pushId}')
             } 
         });
         //push to slack
-        request.post('https://hooks.slack.com/services/abc/abc', { json: { text: `:entranced:有人報名了!!快到firebase查看` } })
+        request.post('https://hooks.slack.com/services/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', { json: { text: `:entranced:有人報名了!!快到firebase查看` } })
     });
